@@ -1,5 +1,10 @@
 import json
 import os
+import sys
+
+# Reconfigure stdout to use UTF-8 on Windows to avoid encoding errors on print
+if sys.platform.startswith('win'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 def validate_lab():
     print("🔍 Đang kiểm tra định dạng bài nộp...")
